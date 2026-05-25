@@ -74,7 +74,7 @@ function PostPage() {
           </header>
 
           <div className="mt-14 font-serif text-lg leading-[1.8] space-y-6 text-foreground/90">
-            {post.content.split(/\n\s*\n/).map((para, i) => (
+            {post.content.split(/\n\s*\n/).map((para: string, i: number) => (
               <p key={i}>{para}</p>
             ))}
           </div>
