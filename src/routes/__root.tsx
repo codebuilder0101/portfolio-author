@@ -68,6 +68,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "J. G. Brasio" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "J. G. Brasio — Direito, Filosofia e Ficção" },
+      { name: "twitter:title", content: "J. G. Brasio — Direito, Filosofia e Ficção" },
+      { property: "og:description", content: "Site oficial do autor J. G. Brasio. Obras de direito, filosofia (Somismo) e ficção, artigos e ensaios." },
+      { name: "twitter:description", content: "Site oficial do autor J. G. Brasio. Obras de direito, filosofia (Somismo) e ficção, artigos e ensaios." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ef1d8090-8984-49a2-be13-5b94507355e8/id-preview-7a8bc514--f3a987b5-9952-4e0b-b180-e6c2f5732ec6.lovable.app-1779674800452.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/ef1d8090-8984-49a2-be13-5b94507355e8/id-preview-7a8bc514--f3a987b5-9952-4e0b-b180-e6c2f5732ec6.lovable.app-1779674800452.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
