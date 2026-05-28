@@ -43,7 +43,7 @@ function LivrosPage() {
           <p className="eyebrow">Catálogo</p>
           <h1 className="mt-6 font-serif text-5xl md:text-7xl font-light">Livros</h1>
           <p className="mt-6 font-serif italic text-xl text-foreground/70">
-            Vinte e cinco títulos em três áreas. Todos disponíveis na Amazon.
+            Vinte e três títulos em três áreas. Todos disponíveis na Amazon.
           </p>
         </header>
 

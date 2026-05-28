@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Twitter, Mail, BookOpen } from "lucide-react";
+import { Instagram, Mail, BookOpen } from "lucide-react";
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -40,13 +40,8 @@ export function SiteFooter() {
               </a>
             </li>
             <li>
-              <a href="#" aria-label="Instagram" className="text-foreground/70 hover:text-foreground transition-colors">
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-foreground/70 hover:text-foreground transition-colors">
                 <Instagram className="h-5 w-5" />
-              </a>
-            </li>
-            <li>
-              <a href="#" aria-label="Twitter" className="text-foreground/70 hover:text-foreground transition-colors">
-                <Twitter className="h-5 w-5" />
               </a>
             </li>
             <li>
@@ -61,7 +56,7 @@ export function SiteFooter() {
       <div className="rule-top">
         <div className="container-wide flex flex-col items-start justify-between gap-2 px-6 py-6 text-xs text-muted-foreground md:flex-row md:items-center">
           <p>© {year} J. G. Brasio. Todos os direitos reservados.</p>
-          <p className="font-serif italic">"A verdade lenta."</p>
+          <p className="font-serif italic">"Talvez a literatura ainda exista para nos lembrar daquilo que o mundo tenta fazer esquecer."</p>
         </div>
       </div>
     </footer>

@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
-import { Instagram, Twitter, Mail, BookOpen } from "lucide-react";
+import { Instagram, Mail, BookOpen } from "lucide-react";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({
@@ -49,8 +49,7 @@ function ContatoPage() {
                     <BookOpen className="h-5 w-5" />
                   </a>
                 </li>
-                <li><a href="#" aria-label="Instagram" className="text-foreground/70 hover:text-foreground transition-colors"><Instagram className="h-5 w-5" /></a></li>
-                <li><a href="#" aria-label="Twitter" className="text-foreground/70 hover:text-foreground transition-colors"><Twitter className="h-5 w-5" /></a></li>
+                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-foreground/70 hover:text-foreground transition-colors"><Instagram className="h-5 w-5" /></a></li>
                 <li><a href="mailto:contato@jgbrasio.com.br" aria-label="E-mail" className="text-foreground/70 hover:text-foreground transition-colors"><Mail className="h-5 w-5" /></a></li>
               </ul>
             </div>

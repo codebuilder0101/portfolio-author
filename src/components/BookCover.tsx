@@ -7,6 +7,23 @@ const AREA_BG: Record<Book["area"], string> = {
 };
 
 export function BookCover({ book, className = "" }: { book: Book; className?: string }) {
+  if (book.cover) {
+    return (
+      <div
+        className={`relative aspect-[2/3] w-full overflow-hidden ${className}`}
+        role="img"
+        aria-label={`Capa do livro ${book.title}`}
+      >
+        <img
+          src={book.cover}
+          alt={`Capa — ${book.title}`}
+          className="h-full w-full object-cover"
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       className={`relative aspect-[2/3] w-full overflow-hidden ${className}`}
@@ -14,13 +31,10 @@ export function BookCover({ book, className = "" }: { book: Book; className?: st
       role="img"
       aria-label={`Capa do livro ${book.title}`}
     >
-      {/* Inner frame to evoke a printed cover */}
       <div className="absolute inset-3 border border-white/25" />
       <div className="absolute inset-0 flex flex-col justify-between p-5 text-[oklch(0.97_0.008_80)]">
         <div className="flex items-start justify-between">
-          <span
-            className="font-sans text-[10px] tracking-[0.22em] uppercase opacity-80"
-          >
+          <span className="font-sans text-[10px] tracking-[0.22em] uppercase opacity-80">
             J. G. Brasio
           </span>
           <span className="font-sans text-[10px] tracking-[0.22em] uppercase opacity-60">

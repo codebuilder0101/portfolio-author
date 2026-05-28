@@ -27,7 +27,7 @@ function AreaSection({ area }: { area: Area }) {
       <div className="container-wide px-6">
         <div className="flex items-end justify-between gap-6">
           <div>
-            <p className="eyebrow">Área</p>
+            <p className="eyebrow">Publicações</p>
             <h2 className="mt-3 font-serif text-4xl md:text-5xl font-light">{AREA_LABELS[area]}</h2>
           </div>
           <Link
@@ -61,12 +61,12 @@ function Index() {
     <SiteLayout>
       {/* HERO */}
       <section className="container-wide px-6 pt-16 pb-20 md:pt-28 md:pb-32">
-        <p className="eyebrow fade-in-up">Autor · Brasil</p>
+        <p className="eyebrow fade-in-up">Autor · Campinas, Brasil</p>
         <h1 className="mt-6 font-serif text-[clamp(3rem,9vw,8rem)] leading-[0.95] font-light fade-in-up">
           J. G. <span className="italic">Brasio</span>
         </h1>
         <p className="mt-8 max-w-2xl font-serif text-2xl md:text-3xl italic text-foreground/80 fade-in-up">
-          Direito, filosofia e ficção — uma obra em três frentes, atravessada pela ideia de Somismo.
+          Entre o Direito, a Filosofia e a Ficção, existem territórios onde as histórias, as ideias e a experiência humana se encontram.
         </p>
 
         <div className="mt-16 grid gap-12 md:grid-cols-[260px_1fr] md:gap-16 md:items-start">
@@ -81,13 +81,14 @@ function Index() {
           <div className="max-w-prose">
             <p className="eyebrow">Sobre</p>
             <p className="mt-4 font-serif text-xl leading-relaxed">
-              J. G. Brasio é jurista, ensaísta e ficcionista. Desde 2014 publica de forma
-              independente, dividindo seu trabalho entre a teoria do direito, a filosofia
-              contemporânea — onde desenvolve o conceito de <em>Somismo</em> — e a prosa de ficção.
+              J. G. Brasio é escritor, advogado, professor e conciliador extrajudicial. Sua obra
+              transita entre o Direito, a Filosofia e a Ficção, explorando temas ligados ao tempo,
+              à memória, à experiência humana e às transformações contemporâneas da sociedade.
             </p>
             <p className="mt-6 text-muted-foreground">
-              Vinte e cinco títulos publicados, todos disponíveis em livrarias online. Seus textos
-              têm em comum a recusa do ruído e a aposta numa leitura lenta.
+              Vinte e três títulos publicados, todos disponíveis na Amazon. Do universo jurídico
+              às reflexões filosóficas do <em>Somismo</em>, passando pela ficção literária, cada
+              obra busca explorar não apenas conceitos, mas atmosferas, escolhas e permanências.
             </p>
             <Link
               to="/sobre"
