@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem \"$env:USERPROFILE\\\\Downloads\" | Where-Object { $_.LastWriteTime -gt \\(Get-Date\\).AddDays\\(-7\\) } | Select-Object Name, LastWriteTime | Sort-Object LastWriteTime -Descending | Select-Object -First 30)",
+      "Bash(ls \"/e/Author project -\\\\$100/\")",
+      "Read(//e/Author project -$100//**)"
+    ]
+  }
+}
