@@ -49,7 +49,7 @@ function ContatoPage() {
                     <BookOpen className="h-5 w-5" />
                   </a>
                 </li>
-                <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-foreground/70 hover:text-foreground transition-colors"><Instagram className="h-5 w-5" /></a></li>
+                <li><a href="https://www.instagram.com/jgbrasio" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-foreground/70 hover:text-foreground transition-colors"><Instagram className="h-5 w-5" /></a></li>
                 <li><a href="mailto:contato@jgbrasio.com.br" aria-label="E-mail" className="text-foreground/70 hover:text-foreground transition-colors"><Mail className="h-5 w-5" /></a></li>
               </ul>
             </div>

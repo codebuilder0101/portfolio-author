@@ -40,7 +40,7 @@ export function SiteFooter() {
               </a>
             </li>
             <li>
-              <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-foreground/70 hover:text-foreground transition-colors">
+              <a href="https://www.instagram.com/jgbrasio" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-foreground/70 hover:text-foreground transition-colors">
                 <Instagram className="h-5 w-5" />
               </a>
             </li>
