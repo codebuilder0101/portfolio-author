@@ -35,14 +35,3 @@ if (existsSync(serverAssetsDir)) {
   console.log(`✓ Server assets → ${clientAssetsDir} (${copied} new files)`);
 }
 
-// 3. Patch dist/server/wrangler.json so Cloudflare Pages recognises this as a valid
-//    Pages project and uses dist/client as the output directory.
-const wranglerPath = join(serverDir, 'wrangler.json');
-if (existsSync(wranglerPath)) {
-  const config = JSON.parse(readFileSync(wranglerPath, 'utf8'));
-  delete config.main;
-  delete config.assets;
-  config.pages_build_output_dir = '../client';
-  writeFileSync(wranglerPath, JSON.stringify(config, null, 2));
-  console.log(`✓ Patched ${wranglerPath} for Cloudflare Pages`);
-}
