@@ -129,4 +129,28 @@ Isso não é evitar o Direito — é usá-lo no melhor momento. O tribunal exist
 
 Se você tem uma questão jurídica em aberto, vale uma pergunta simples antes de qualquer coisa: existe um caminho antes do processo?`,
   },
+{
+  slug: "despejo-por-cartorio",
+  title: "Despejo por Cartório: revolução na locação ou risco aos direitos do inquilino?",
+  excerpt:
+    "O projeto que cria o despejo extrajudicial reacendeu um debate importante: eficiência, desjudicialização e garantias do locatário.",
+  category: "Direito",
+  date: "2026-05-29",
+  readingTime: "8 min",
+  content: `Há poucos anos parecia impensável fazer um divórcio, um inventário ou uma usucapião sem juiz. Hoje, tudo isso já se resolve no cartório.
+
+O PL 3999/20 propõe mais um passo nessa trajetória: a criação do despejo extrajudicial para determinadas hipóteses de inadimplência locatícia.
+
+A proposta não autoriza que o tabelião retire alguém do imóvel por conta própria. O procedimento prevê notificação formal, prazo para pagamento ou desocupação e preserva o acesso ao Poder Judiciário.
+
+Os defensores da medida afirmam que ela fortalece o direito de propriedade, reduz custos e desafoga o Judiciário.
+
+Já os críticos alertam para possíveis riscos ao direito à moradia, ao contraditório e à proteção de locatários em situação de vulnerabilidade.
+
+O debate ainda está em andamento no Congresso Nacional e o texto não se tornou lei.
+
+Independentemente do resultado, a discussão revela um fenômeno maior: a contínua transferência de determinados procedimentos do Judiciário para a atividade notarial e registral.
+
+A pergunta permanece aberta: o despejo extrajudicial será o próximo grande passo da desjudicialização brasileira?`
+},
 ];
