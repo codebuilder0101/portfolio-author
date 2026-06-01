@@ -19,7 +19,11 @@ jobs:
 
       - run: npm run build
 
+      # Deploy the artifact produced by @cloudflare/vite-plugin (pre-bundled
+      # worker + static assets + bindings). A bare `wrangler deploy` would try
+      # to re-bundle src/server.ts and fail.
       - uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy --config dist/server/wrangler.json
