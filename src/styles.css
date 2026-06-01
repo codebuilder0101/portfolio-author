@@ -165,3 +165,55 @@
     to { opacity: 1; transform: none; }
   }
 }
+
+/* Rendered article HTML (public page) and editor surface */
+.article-body p { margin: 0 0 1.25em; }
+.article-body h2 {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin: 1.6em 0 0.5em;
+}
+.article-body h3 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin: 1.4em 0 0.4em;
+}
+.article-body blockquote {
+  border-left: 3px solid var(--color-rule);
+  padding-left: 1.25em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: var(--color-muted-foreground);
+}
+.article-body ul,
+.article-body ol { margin: 0 0 1.25em; padding-left: 1.5em; }
+.article-body ul { list-style: disc; }
+.article-body ol { list-style: decimal; }
+.article-body li { margin: 0.35em 0; }
+.article-body a { text-decoration: underline; text-underline-offset: 3px; }
+.article-body figure { margin: 1.75em 0; }
+.article-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: block;
+  margin-inline: auto;
+}
+.article-body figcaption {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  color: var(--color-muted-foreground);
+  text-align: center;
+  margin-top: 0.5em;
+}
+.article-body hr { border: 0; border-top: 1px solid var(--color-rule); margin: 2em 0; }
+
+/* Editor placeholder hint when empty */
+.prose-editor:empty::before {
+  content: "Escreva o artigo aqui…";
+  color: var(--color-muted-foreground);
+  pointer-events: none;
+}

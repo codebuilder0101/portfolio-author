@@ -3,5 +3,29 @@
   "name": "tanstack-start-app",
   "compatibility_date": "2025-09-24",
   "compatibility_flags": ["nodejs_compat"],
-  "main": "src/server.ts"
+  "main": "src/server.ts",
+
+  // --- Content store (articles + categories + settings) ---
+  // Create with:  npx wrangler d1 create jgbrasio-content
+  // then paste the returned database_id below, and run:
+  //   npx wrangler d1 migrations apply jgbrasio-content --remote
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "jgbrasio-content",
+      "database_id": "e9430a9a-8417-456a-9835-ad56458363e2",
+      "migrations_dir": "migrations"
+    }
+  ],
+
+  // Default admin password (used to seed on first run). Change it in the panel.
+  //
+  // Everything else lives in env files, NOT here:
+  //   - local dev:  .dev.vars  (gitignored)
+  //   - production: Worker secrets via `npx wrangler secret put <NAME>`
+  //       SESSION_SECRET, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY,
+  //       CLOUDINARY_API_SECRET  (CLOUDINARY_FOLDER defaults to "jgbrasio")
+  "vars": {
+    "ADMIN_PASSWORD": "111111"
+  }
 }

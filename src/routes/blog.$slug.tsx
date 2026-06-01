@@ -1,11 +1,11 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import { POSTS } from "@/data/posts";
+import { fetchArticleBySlug } from "@/serverfn/content";
 import { ArrowLeft } from "lucide-react";
 
 export const Route = createFileRoute("/blog/$slug")({
-  loader: ({ params }) => {
-    const post = POSTS.find((p) => p.slug === params.slug);
+  loader: async ({ params }) => {
+    const post = await fetchArticleBySlug({ data: params.slug });
     if (!post) throw notFound();
     return { post };
   },
@@ -73,11 +73,10 @@ function PostPage() {
             </p>
           </header>
 
-          <div className="mt-14 font-serif text-lg leading-[1.8] space-y-6 text-foreground/90">
-            {post.content.split(/\n\s*\n/).map((para: string, i: number) => (
-              <p key={i}>{para}</p>
-            ))}
-          </div>
+          <div
+            className="article-body mt-14 font-serif text-lg leading-[1.8] space-y-6 text-foreground/90"
+            dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+          />
 
           <hr className="mt-20 border-rule" />
           <footer className="mt-10 flex items-center justify-between">

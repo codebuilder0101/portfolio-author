@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import { POSTS } from "@/data/posts";
+import { fetchArticles } from "@/serverfn/content";
 
 export const Route = createFileRoute("/blog/")({
+  loader: async () => ({ posts: await fetchArticles() }),
   head: () => ({
     meta: [
       { title: "Artigos — J. G. Brasio" },
@@ -21,7 +22,25 @@ function formatDate(iso: string) {
 }
 
 function BlogPage() {
-  const [featured, ...rest] = POSTS;
+  const { posts } = Route.useLoaderData();
+
+  if (posts.length === 0) {
+    return (
+      <SiteLayout>
+        <section className="container-wide px-6 py-16 md:py-24">
+          <header className="max-w-3xl">
+            <p className="eyebrow">Blog</p>
+            <h1 className="mt-6 font-serif text-5xl md:text-7xl font-light">Artigos</h1>
+            <p className="mt-6 font-serif italic text-xl text-foreground/70">
+              Nenhum artigo publicado ainda.
+            </p>
+          </header>
+        </section>
+      </SiteLayout>
+    );
+  }
+
+  const [featured, ...rest] = posts;
 
   return (
     <SiteLayout>

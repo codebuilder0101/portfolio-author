@@ -21,8 +21,9 @@ export const Route = createFileRoute("/sitemap.xml")({
           { path: "/contato", changefreq: "monthly", priority: "0.5" },
         ];
 
-        const { POSTS } = await import("@/data/posts");
-        for (const p of POSTS) {
+        const { fetchArticles } = await import("@/serverfn/content");
+        const posts = await fetchArticles();
+        for (const p of posts) {
           entries.push({ path: `/blog/${p.slug}`, changefreq: "monthly", priority: "0.6" });
         }
 
